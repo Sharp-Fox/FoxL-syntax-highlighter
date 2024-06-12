@@ -20,7 +20,7 @@ Once the extension is installed, it will automatically highlight FoxL syntax in 
 
 ## Issues and Feedback
 
-If you encounter any issues or have feedback, please feel free to [create an issue](https://github.com/your-username/your-repository/issues) in the GitHub repository.
+If you encounter any issues or have feedback, please feel free to [create an issue](https://github.com/Sharp-Fox/FoxL-syntax-highlighter/issues) in the GitHub repository.
 
 ## Contributing
 
