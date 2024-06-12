@@ -32,6 +32,9 @@
             }
         ]
     },
+    "scripts": {
+        "build": "echo 'No build step required'"
+    },
     "devDependencies": {
         "@types/vscode": "^1.1.36",
         "typescript": "^4.5.5"
