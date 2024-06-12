@@ -25,6 +25,7 @@ jobs:
         run: |
           npm install
           npm run build
+          vsce package
 
       - name: Publish to Visual Studio Code Marketplace
         run: vsce publish -p ${{ secrets.VSCE_TOKEN }} --packagePath "*.vsix"
