@@ -28,4 +28,4 @@ jobs:
         run: npm run build
 
       - name: Publish to Visual Studio Code Marketplace
-        run: vsce publish -p ${{ secrets.VSCE_TOKEN }} --packagePath "/home/runner/work/FoxL-syntax-highlighter/FoxL-syntax-highlighter/vscode-foxl-0.1.0.vsix"
+        run: vsce publish
