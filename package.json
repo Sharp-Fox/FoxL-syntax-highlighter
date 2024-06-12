@@ -1,0 +1,40 @@
+{
+    "name": "vscode-foxl",
+    "displayName": "FoxL",
+    "description": "Syntax highlighting and language support for FoxL in Visual Studio Code.",
+    "version": "0.1.0",
+    "publisher": "FoxH",
+    "engines": {
+        "vscode": "^1.60.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "foxl",
+                "extensions": [
+                    ".foxl"
+                ],
+                "aliases": [
+                    "FoxL",
+                    "foxl"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "foxl",
+                "scopeName": "source.foxl",
+                "path": "./foxl.tmLanguage.json"
+            }
+        ]
+    },
+    "devDependencies": {
+        "@types/vscode": "^1.1.36",
+        "typescript": "^4.5.5",
+        "vscode": "^1.60.0"
+    }
+}
