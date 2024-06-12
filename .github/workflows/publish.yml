@@ -18,13 +18,13 @@ jobs:
         with:
           node-version: '14'
 
+      - name: Install vsce
+        run: npm install -g vsce
+
       - name: Install dependencies and build extension
         run: |
           npm install
           npm run build
 
       - name: Publish to Visual Studio Code Marketplace
-        uses: vscode/extension-publish-action@v1
-        with:
-          pat: ${{ secrets.VSCE_TOKEN }}
-          extensionPath: "*.vsix"
+        run: vsce publish -p ${{ secrets.VSCE_TOKEN }} --packagePath "*.vsix"
