@@ -1,6 +1,6 @@
 {
     "name": "vscode-foxl",
-    "displayName": "FoxL",
+    "displayName": "FoxL syntax highlighting",
     "description": "Syntax highlighting and language support for FoxL in Visual Studio Code.",
     "version": "0.1.2",
     "publisher": "FoxH",
@@ -32,16 +32,13 @@
             }
         ]
     },
-    "scripts": {
-        "build": "echo 'No build step required'"
-    },
-    "devDependencies": {
-        "@types/vscode": "^1.1.36",
-        "typescript": "^4.5.5"
-    },
     "repository": {
         "type": "git",
         "url": "https://github.com/Sharp-Fox/FoxL-syntax-highlighter"
     },
-    "license": "MIT"
+    "devDependencies": {
+        "@types/vscode": "^1.1.36",
+        "typescript": "^4.5.5",
+        "vscode": "^1.60.0"
+    }
 }

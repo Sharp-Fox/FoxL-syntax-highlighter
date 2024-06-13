@@ -1,66 +1,67 @@
 {
   "name": "FoxL",
-  "fileTypes": ["foxl"],
   "scopeName": "source.foxl",
+  "fileTypes": ["foxl"],
   "patterns": [
-    {
-      "name": "comment.line.double-slash.foxl",
-      "match": "//.*?$",
-      "captures": {
-        "0": {"name": "punctuation.definition.comment.foxl"}
+      {
+          "include": "#comments"
+      },
+      {
+          "include": "#variables"
+      },
+      {
+          "include": "#functions"
       }
-    },
-    {
-      "name": "variable.other.foxl",
-      "match": "\\b(let|var)\\s+\\w+\\b"
-    },
-    {
-      "name": "string.quoted.double.foxl",
-      "begin": "\"",
-      "end": "\"",
-      "patterns": [
-        {
-          "name": "constant.character.escape.foxl",
-          "match": "\\\\."
-        }
-      ]
-    },
-    {
-      "name": "keyword.control.foxl",
-      "match": "\\b(if|else)\\b"
-    },
-    {
-      "name": "constant.numeric.foxl",
-      "match": "\\b\\d+(\\.\\d+)?\\b"
-    },
-    {
-      "name": "constant.language.boolean.true.foxl",
-      "match": "\\b(true)\\b"
-    },
-    {
-      "name": "constant.language.boolean.false.foxl",
-      "match": "\\b(false)\\b"
-    },
-    {
-      "name": "support.function.foxl",
-      "match": "\\b(write|read)\\b"
-    },
-    {
-      "name": "entity.name.function.foxl",
-      "match": "\\b\\w+\\b(?=\\s*\\()",
-      "captures": {
-        "0": {"name": "entity.name.function.foxl"}
-      }
-    }
   ],
   "repository": {
-    "comment": {
-      "patterns": [
-        {
-          "name": "punctuation.definition.comment.foxl",
-          "match": "//"
-        }
-      ]
-    }
+      "comments": {
+          "patterns": [
+              {
+                  "match": "//.*$",
+                  "name": "comment.line.double-slash.foxl"
+              }
+          ]
+      },
+      "variables": {
+          "patterns": [
+              {
+                  "match": "\\b(let|var)\\s+\\w+\\s*=\\s*\\[.*?\\];",
+                  "name": "variable.other.array.foxl",
+                  "captures": {
+                      "1": {
+                          "name": "keyword.declaration.foxl"
+                      }
+                  },
+                  "patterns": [
+                      {
+                          "match": "\\d+",
+                          "name": "constant.numeric.integer.foxl"
+                      },
+                      {
+                          "match": "\"[^\"]+\"",
+                          "name": "string.quoted.double.foxl"
+                      }
+                  ]
+              }
+          ]
+      },
+      "functions": {
+          "patterns": [
+              {
+                  "match": "\\bfunc\\s+\\w+\\s*\\([^)]*\\)\\s*\\{[^}]*\\}",
+                  "name": "entity.name.function.foxl",
+                  "patterns": [
+                      {
+                          "match": "\\breturn\\b",
+                          "name": "keyword.control.return.foxl"
+                      },
+                      {
+                          "match": "\\b\\w+\\b",
+                          "name": "variable.parameter.function.foxl"
+                      }
+                  ]
+              }
+          ]
+      }
   }
 }
