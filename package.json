@@ -2,7 +2,7 @@
     "name": "vscode-foxl",
     "displayName": "FoxL",
     "description": "Syntax highlighting and language support for FoxL in Visual Studio Code.",
-    "version": "0.1.0",
+    "version": "0.1.2",
     "publisher": "FoxH",
     "engines": {
         "vscode": "^1.60.0"
