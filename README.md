@@ -12,7 +12,7 @@ This extension provides syntax highlighting support for the FoxL programming lan
 1. Launch Visual Studio Code.
 2. Go to the Extensions view by clicking on the square icon in the sidebar or pressing `Ctrl+Shift+X`.
 3. Search for "FoxL" in the Extensions view search box.
-4. Click on the Install button for the "FoxL Syntax Highlighter" extension authored by [your-publisher-name].
+4. Click on the Install button for the "FoxL Syntax Highlighter" extension authored by FoxH.
 
 ## Usage
 
